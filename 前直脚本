@@ -19,7 +19,7 @@ local Window = Library:CreateWindow({
 
 -- 创建标签页 (Tab)
 local Tabs = {
-    Main = Window:AddTab("服务器", "info"),
+    Main = Window:AddTab("墨水游戏", "laptop")
     Settings = Window:AddTab("设置UI", "settings"),
 }
 
@@ -27,27 +27,10 @@ local Tabs = {
 -- Left 和 Right 决定了在窗口的哪一侧
 local LeftGroup = Tabs.Main:AddLeftGroupbox("Borenhub翻译博伦")
 local RightGroup = Tabs.Main:AddRightGroupbox("AX翻译斧头")
-local RightGroup1 = Tabs.Main:AddRightGroupbox("🚦:AX的:每个颜色状态")
-local RightGroup2 = Tabs.Main:AddRightGroupbox("AX可玩服务器")
 
 -- 1. 文本标签 (Label)
-LeftGroup:AddLabel('博论99夜未汉化')
 LeftGroup:AddLabel('博论墨水游戏汉化有点没汉化')
-RightGroup1:AddLabel('🟢:运行中:未被检测到')
-RightGroup1:AddLabel('🟡:更新中:运行中+未被检测到,但正在更新')
-RightGroup1:AddLabel('🟤:测试中:仅面向测试人员,可能存在漏洞或不稳定行为')
-RightGroup1:AddLabel('🟠:更新中但无法运行:正在更,当前不可用')
-RightGroup1:AddLabel('🟣:有风险:可运行,但能导致账号封禁')
-RightGroup1:AddLabel('🔵:进行中:目前处于开发阶段')
-RightGroup1:AddLabel('🔴:已修复:已被检测到(已禁用)')
-RightGroup1:AddLabel('⚫:已停用:不再提供更新')
-RightGroup2:AddLabel('🟡:墨水游戏已汉化')
-RightGroup2:AddLabel('🟢:鱿鱼游戏X未汉化')
-RightGroup2:AddLabel('🟢:Dungeon Hunters未汉化')
-RightGroup2:AddLabel('🟢:在披萨店工作未汉化')
-RightGroup2:AddLabel('🟢:闪光未汉化')
-RightGroup2:AddLabel('🟤:超级狙击步枪❌还不能用！')
-
+RightGroup:AddLabel('斧头墨水游戏汉化有点没汉化')
 
 LeftGroup:AddButton({
     Text = '墨水游戏Borenhub汉化',
@@ -57,18 +40,10 @@ LeftGroup:AddButton({
     end,
 })
 
-LeftGroup:AddButton({
-    Text = '99夜Borenhub未汉化',
-    Func = function()
-        Library:Notify("99夜Borenhub未汉化", 3)
-        loadstring(game:HttpGet("https://rawscripts.net/raw/99-Nights-in-the-Forest-99-Nights-in-the-forest-borenhub-55962"))()
-    end,
-})
-
 RightGroup:AddButton({
-    Text = 'AX通用',
+    Text = '墨水游戏AX',
     Func = function()
-        Library:Notify("是什么服务器😑🤔", 3)
+        Library:Notify("墨水游戏斧头", 3)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ojdoxbkvxosh/ax-/refs/heads/main/axdsw"))()
     end,
 })
